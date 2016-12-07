@@ -100,7 +100,26 @@ Similar to the LESS repo, only this time... Sass. Scss if you need to be technic
   font-size: calculateRem($size);
 }
 
-// Below are credited to Andy.scss
+/*
+* Turns on anti aliasing for smoother fonts on OSX
+*
+* Usage: @include font-smoothing(on);
+*
+* Argument can on or off. 
+*
+*/
+@mixin font-smoothing($value: on) {
+    @if $value == on {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    @else {
+        -webkit-font-smoothing: subpixel-antialiased;
+        -moz-osx-font-smoothing: auto;
+    }
+}
+
+// Everything below is credited to Andy.scss
 
 /// Adds a thin black line above the element, and a thin gray line below the element, creating an inlay effect.
 /// @access public
