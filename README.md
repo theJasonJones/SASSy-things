@@ -52,6 +52,19 @@ Similar to the LESS repo, only this time... Sass. Scss if you need to be technic
 }
 
 /*
+*  
+*  Usage: @include bg-image(x, y) 
+*  x : Can be top, left, bottom, right, center or a percent
+*  y : Can be top, left, bottom, right, center or a percent
+*
+*/
+@mixin bg-image($first-position : center, $second-position: center) {
+  background-position: $first-position $second-position; 
+  background-size: cover; 
+  background-repeat: no-repeat;
+}
+
+/*
 * Clearfix for badly behaving floats (Yes, some of us still support legacy IE)
 * Source: http://nicolasgallagher.com/micro-clearfix-hack/
 *
