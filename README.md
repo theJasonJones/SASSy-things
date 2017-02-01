@@ -17,6 +17,7 @@ Similar to the LESS repo, only this time... Sass. Scss if you need to be technic
 
   @if not $width and not $height {
     -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
   } @else if $width and $height {
     width: $width;
